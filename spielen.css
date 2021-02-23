@@ -1,0 +1,164 @@
+/*
+Gruppe: Gruppe 03
+Beschreibung: Style der Spieleseite
+Version: 1.2
+Autor/en: Antje Hänzelmann, Manuel Wittmann
+*/
+
+/*Card colors*/
+.blue {
+    background-color: #1d3557;
+}
+
+.midblue {
+    background-color: #219ebc;
+}
+
+.lightblue {
+    background-color: #8ecae6;
+}
+
+.yellow {
+    background-color: #ffb703;
+}
+
+.orange {
+    background-color: #fb8500;
+}
+
+.red {
+    background-color: #8338ec;
+}
+
+.wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.cardSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardContainer {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.cardContainer:hover {
+    transform: scale(1.2);
+}
+
+.flip {
+    transform: translate(0.8);
+    
+}
+
+.flip:hover {
+    transform: rotateY(180deg);
+    
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    border-radius: 10px;
+    background-color: #219ebc;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back p {
+    margin: 20px 10px;
+    color: #dddddd;
+}
+
+.cardLink {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.cardContainer img {
+    width: 85px;
+    margin-top: 20px;
+}
+
+h5 {
+    margin-top: 60px;
+}
+
+#form {
+    display: none;
+    cursor: url("../images/curserHeader.png"), auto;
+    position: relative;
+}
+
+.dauer {
+    font-weight: bold;
+}
+
+#plattBGF, #plattBGB {
+    background-color: #1d3557;
+}
+#headLineGuessNum{
+    background-color: aliceblue;
+    border-radius: 25px;
+    color: #3b8ec2;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
+#headLineGuessNum:hover{
+    background-color:#3b8ec2;
+    color: aliceblue;
+    transition: 0.2s ease;
+}
+#userZahl{
+    border-radius: 25px;
+    padding: 5px;
+}
+#raten{
+    border-radius: 25px;
+    padding: 10px;
+}
+#raten:hover{
+    background-color:#3b8ec2;
+    color: aliceblue;
+    transition: 0.2s ease;
+}
+#animTxt{
+    position: relative;
+    font-family: 'Turret Road', cursive;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #8a8db5, #fff, #050a45) no-repeat;
+    background-size: 60%;
+    animation: animate 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
