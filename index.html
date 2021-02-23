@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+Gruppe: Gruppe 03
+Beschreibung: Grundgerüst für HangRobo Spiel
+Version: 1.1
+Autor/en: Manuel Wittmann
+-->
+<html lang="en">
+<head>
+    <title>HangMan Gr-03</title>
+    <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+    <link rel="stylesheet" type="text/css" href="spielen.css">
+</head>
+<body>
+<header>
+    <!--Menü-->
+    
+</header>
+<main>
+   
+
+    <h1 class="fancy">Hang-Robo</h1>
+    <p class="whiteTxt">Guess the word - Choose a letter</p>
+
+    <div class="spielContainer">
+
+        <svg height="250" width="200" class="roboContainer">
+            <!-- Galgen-->
+            <line x1="60" y1="20" x2="140" y2="20"/>
+            <line x1="140" y1="20" x2="140" y2="50"/>
+            <line x1="60" y1="20" x2="60" y2="230"/>
+            <line x1="20" y1="230" x2="100" y2="230"/>
+
+            <!-- Robo -->
+            <rect x="110" y="50" width="60" height="40" class="roboPart"/>
+            <circle cx="125" cy="65" r="7" class="roboPart"/>
+            <circle cx="155" cy="65" r="7" class="roboPart"/>
+            <rect x="125" y="75" width="30" height="10" rx="3" class="roboPart"/>
+            <line x1="140" y1="90" x2="140" y2="150" class="roboPart"/>
+            <line x1="140" y1="110" x2="110" y2="130" class="roboPart"/>
+            <line x1="140" y1="110" x2="170" y2="130" class="roboPart"/>
+            <line x1="140" y1="150" x2="170" y2="180" class="roboPart"/>
+            <line x1="140" y1="150" x2="110" y2="180" class="roboPart"/>
+        </svg>
+
+        <!-- falsche Buchstaben  -->
+        <div class="falscheBuchstabenContainer">
+            <div id="falscheBuchstaben"></div>
+        </div>
+
+        <div class="wort" id="wort"></div>
+    </div>
+
+    <!-- Notification -->
+
+    <div class="popupContainer" id="popupContainer">
+        <div class="popup">
+            <h2 id="finalMessage"></h2>
+            <button id="play-button">New Try</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notficationContainer" id="notificationContainer">
+        <p>You already selected this character</p>
+    </div>
+
+</main>
+<!--Footerbereich-->
+<footer>
+
+</footer>
+<script src="js/main.js"></script>
+<script src="hangrobo.js"></script>
+<script src="js/dayNightToggle.js"></script>
+</body>
+
+</html>
